@@ -1,0 +1,368 @@
+body {
+  padding: 0rem;
+  margin: 0rem;
+  font: 12px system-ui;
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+.none {
+  display: none;
+}
+.headermobile {
+  display: none;
+}
+.header {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.header a {
+  margin-right: 6vw;
+}
+
+h1 {
+  color: black;
+}
+h2 {
+  color: rgb(10, 10, 10, 90%);
+  font-size: 2rem;
+}
+h3 {
+  color: rgb(10, 10, 10, 80%);
+  font-size: 1rem;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: black;
+  font-size: 1.6rem;
+  padding: 0.1rem;
+}
+
+/* square for design   */
+#square {
+  position: absolute;
+  width: 50%;
+  height: 35rem;
+  background-color: rgba(214, 228, 247, 0.8);
+  top: -1rem;
+  right: 0px;
+  z-index: -1;
+  border-radius: 0px 0px 0px 30px;
+}
+/* grid 1  */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 2fr));
+  grid-gap: 1rem;
+  width: 100%;
+  align-items: center;
+  margin-top: 15%;
+}
+.grid > div {
+  border-radius: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.g1 {
+  padding-left: 1rem;
+}
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+/*grid 2 */
+.productcontent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  width: 100%;
+  grid-gap: 1rem;
+  align-items: center;
+  padding: 0rem;
+  margin-top: 2rem;
+}
+.productcontent div {
+  position: relative;
+  height: 100%;
+}
+.productcontent img {
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.product a span {
+  height: 0%;
+  width: 0%;
+  background-color: rgb(255, 99, 71, 50%);
+  z-index: 2;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0rem;
+  color: white;
+}
+
+.product a:hover span {
+  animation: productanime 0.2s linear forwards;
+}
+@keyframes productanime {
+  0% {
+    height: 0%;
+    width: 0%;
+    border-radius: 0% 50% 50% 50%;
+    font-size: 0rem;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+    border: 0%;
+    font-size: 1.5rem;
+  }
+}
+
+.logo {
+  height: 2rem;
+}
+#logo:hover {
+  fill: red;
+}
+#logo {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+}
+
+/* button style  */
+.a1 {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.a1:hover {
+  transform: scale(1.1);
+}
+.button {
+  background-color: rgb(255, 99, 71);
+  text-align: center;
+  color: white;
+  justify-self: center;
+  padding-bottom: 9px;
+  border-radius: 5px;
+  min-width: 170px;
+}
+
+/* border animation*/
+.header a {
+  position: relative;
+}
+.header a::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 100%;
+  border-bottom: 0.1rem solid transparent;
+}
+.header a:hover::before {
+  animation: animation1 0.1s linear forwards;
+}
+
+/* Key frames*/
+@keyframes animation1 {
+  0% {
+    border-bottom: 0.1rem solid transparent;
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+    border-bottom: 0.1rem solid red;
+  }
+}
+
+/* Humber ger part for the mobile*/
+.humberger {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  right: 2rem;
+  top: 1rem;
+  z-index: 2;
+}
+.humberger span {
+  width: 100%;
+  height: 0.3rem;
+  margin-top: 0.275rem;
+  background-color: black;
+  display: block;
+  border-radius: 0.15rem;
+}
+.humberger:hover span {
+  background-color: tomato;
+}
+.humberger:hover {
+  cursor: pointer;
+}
+
+/*product header*/
+.productheader {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  background-color: rgba(214, 228, 247, 0.8);
+  align-items: center;
+}
+.productheader span {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.productheader p {
+  font-size: 1.5rem;
+  width: 12rem;
+  text-align: center;
+}
+.productheader p:hover,
+.productheader p:focus,
+.productheader p:active {
+  color: tomato;
+  transition: 0.1s linear;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/*  search bar  */
+.search_bar {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search_bar input {
+  width: 15rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  opacity: 0.5;
+  padding-left: 10px;
+}
+
+/* Footer part*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10rem;
+  width: 100%;
+  height: 15rem;
+  background-color: rgba(214, 228, 247, 0.8);
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+.footersocial {
+  display: flex;
+  justify-content: center;
+  height: 6rem;
+  width: 6rem;
+}
+.footersocial a svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+.footersocial a svg:hover {
+  opacity: 1;
+}
+
+/*Responsive desogn fo phones*/
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(1, minmax(100px, 2fr));
+  }
+  .g1 {
+    grid-row: 2;
+  }
+  .g2 {
+    grid-row: 1;
+  }
+  .header {
+    display: none;
+  }
+
+  .headermobile {
+    margin-top: 1rem;
+    padding-right: 0.3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headerunder {
+    display: flex;
+    position: relative;
+    height: 3.5rem;
+  }
+
+  /* managing the in and out of the menu*/
+
+  .links {
+    padding-top: 1vw;
+    padding-bottom: 0.25rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(240, 255, 255, 80%);
+    animation: in 0.4s linear forwards;
+    overflow: hidden;
+  }
+
+  .linksout {
+    animation: out 0.4s linear forwards;
+  }
+
+  .links a {
+    font-size: 3.4vw;
+    border-bottom: 1px solid grey;
+  }
+
+  #square {
+    position: absolute;
+    top: -20%;
+  }
+
+  @keyframes in {
+    0% {
+      height: 0rem;
+    }
+    100% {
+      height: 16vw;
+    }
+  }
+
+  @keyframes out {
+    0% {
+      height: 16vw;
+    }
+    100% {
+      height: 0rem;
+      display: none;
+    }
+  }
+
+  /* product header*/
+}

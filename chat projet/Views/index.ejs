@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class ="header" id="insc" >
+    <a  href="#"><h3>S'inscrire</h3></a> 
+    </div>
+    <div class ="header" id="conn">
+    <a href="#"><h3>Se connecter</h3></a> 
+    </div>
+    
+
+    <div class="connection">
+        <form action="/" method="post">
+            <h1 class="formtitle">Connection</h1>
+            <table class="formconnection">
+
+                <tr>
+                <td><input type="email" class="inputs" name="connemail" placeholder="Email"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="password" class="inputs" name="connpasseword" placeholder="Mot de passe"></td>
+                </tr>
+            </table>
+            <input type="submit" class="send" name="connection" value="Connection">
+        </form>
+    </div>
+    <div class="connection2">
+        <form action="/" method="POST" name="inscription">
+            <h1 class="formtitle2">Inscription</h1>
+            <table class="forminscription">
+
+                <tr class="row">
+                <td><input type="text" class="inputs" name="insname" placeholder="Nom"></td>
+                </tr>
+
+                <tr class="row">
+                <td><input type="text" class="inputs" name="inslastname" placeholder="Prenom"></td>
+                </tr>
+
+                <tr class="row">
+                <td><input type="email" class="inputs" name="insemail" placeholder="Email"></td>
+                </tr>
+
+                <tr class="row">
+                    <td><input type="password" class="inputs" name="inspass" placeholder="Mot de passe"></td>
+                </tr>
+
+                <tr class="row">
+                    <td><input type="password" class="inputs" name="inspassconf" placeholder="confirmation du mot de passe"></td>
+                </tr>
+            </table>
+            <input type="submit" class="sendinscription" name="inscription" value="Inscription">
+        </form>
+    </div>
+    <script src="public/events.js"></script>
+</body>
+</html>

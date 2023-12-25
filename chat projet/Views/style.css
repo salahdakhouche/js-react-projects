@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppin", sans-serif;
+}
+body {
+  background-image: url("./images/back.png");
+}
+
+/*configuration du header et du lien d'inscription et de la connection*/
+
+a:link,
+a:visited {
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  animation: move 0.5s ease;
+  font-size: 23px;
+}
+
+.header {
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  margin-right: 0px;
+  width: fit-content;
+}
+
+@keyframes move {
+  0% {
+    font-size: 20px;
+  }
+  100% {
+    font-size: 23px;
+  }
+}
+
+#conn {
+  display: none;
+}
+
+/*configuration de la div du formulaire inscription et connection*/
+.connection2 {
+  display: none;
+}
+
+.connection,
+.connection2 {
+  background: rgba(255, 255, 255, 0.3);
+  height: 70vh;
+  width: 400px;
+  position: absolute;
+  border-radius: 5px;
+  left: 50%;
+  margin-left: -200px;
+  top: 50%;
+  margin-top: -35vh;
+  padding: 20px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+/*configuration du tablau et de la form*/
+form {
+  width: 100%;
+  height: 100%;
+}
+.row {
+  margin-top: 10px;
+}
+.formtitle {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 30px;
+  color: white;
+}
+.formtitle2 {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+.formconnection {
+  width: 100%;
+  height: 30%;
+  margin-top: 90px;
+  border-spacing: 10px;
+}
+.forminscription {
+  width: 100%;
+  height: 70%;
+  border-collapse: separate;
+  border-spacing: 10px;
+  margin-top: 30px;
+}
+
+.inputs {
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 3px;
+  border: 0px white solid;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+}
+.inputs::placeholder {
+  opacity: 1;
+  color: black;
+}
+.inputdesc {
+  font-size: 30px;
+  color: black;
+  width: 20px;
+  padding-left: 20px;
+}
+
+/* configuration des bouttons*/
+.send {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  height: 50px;
+  width: 200px;
+  border: none;
+  border-radius: 0;
+  margin-top: 20%;
+  background-color: rgb(31, 89, 250, 0.5);
+  font-size: 30px;
+  color: white;
+}
+
+.send:hover,
+.sendinscription:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+}
+.send:active,
+.sendinscription:active {
+  background-color: rgb(31, 89, 250, 1);
+}
+
+.sendinscription {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  height: 50px;
+  width: 200px;
+  border: none;
+  border-radius: 0;
+  margin-top: 5%;
+  background-color: rgb(31, 89, 250, 0.5);
+  font-size: 30px;
+  color: white;
+}

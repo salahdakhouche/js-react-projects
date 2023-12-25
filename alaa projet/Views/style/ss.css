@@ -1,0 +1,59 @@
+.grid2 button {
+  width: 50%;
+  height: 4rem;
+  background-color: tomato;
+  border: 1px solid rgb(255, 87, 58);
+  opacity: 0.8;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+}
+.grid2 button a {
+  font-size: 1rem;
+  color: white;
+  height: 100%;
+}
+.grid2 button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.grid2 {
+  margin-left: 5%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 2fr));
+  grid-gap: 1rem;
+  width: 90%;
+  align-items: center;
+  margin-top: 15%;
+}
+.grid2 > div {
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 1023px) {
+  .grid2 {
+    grid-template-columns: repeat(1, minmax(100px, 2fr));
+  }
+}
+
+.overlay {
+  margin-top: 4rem;
+  width: 100%;
+  height: 50vh;
+  background: 
+    /* top, transparent red, faked with gradient */ linear-gradient(
+      rgba(7, 7, 7, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    /* bottom, image */ url("../images//main.jpeg") center no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay h2 {
+  color: white;
+  text-align: center;
+}

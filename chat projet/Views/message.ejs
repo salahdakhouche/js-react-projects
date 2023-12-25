@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/messagestyle.css">
+    <title>Messages</title>
+</head>
+<body>
+    <img src="public/images/back.png" alt="">
+    <div class="mheader">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Documentation</a>
+            <a href="#"> About us</a>
+            <a href="/">Log out </a>
+        </nav>
+        
+    </div>
+    <h2 style="color: azure; font-size: 1.5vw; margin: auto; width: fit-content; margin-top: 3%;">Welcom, <p style="color: tomato;"><%=email %></p></h2>
+    <div class="messagecontainer">
+        <div class="messageslist">
+            <% 
+            for(var i=0;i< res.length;i++){
+                
+            %>
+            <div class="siglemessage">
+                <%= res[i][1].email %> <br>
+                <%= res[i][1].message %>
+            </div>
+            <% }  %>
+
+        </div>
+        <div class="onlinelist"></div>
+        <div class="messagesend">
+            <form action="message" method="post" name="ourmessage" class="messages">
+                <input class="inputmessage" value="" name="message" type="text" placeholder="please enter your message here">
+                <input class="submitmessage" name="subsub" type="submit" value="">
+            </form>
+        </div>
+    </div>
+    <script src="public/messenvents.js">
+        
+    </script>
+</body>
+</html>
